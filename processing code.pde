@@ -1,0 +1,70 @@
+
+
+ import ddf.minim.*;
+ Minim    minim;
+ AudioPlayer music;
+ float voice;
+ 
+ void setup() { 
+ size(400,400);
+  background(25,162,143);
+    fill(0,250,219);
+  ellipse(250,250,350,350);
+  frameRate(100);
+   size(500,500);
+   minim = new Minim(this);
+   music = minim.loadFile("music.mp3",1042);
+   music.loop();
+ }
+ void draw(){
+   voice = music.mix.level();
+   fill(200);
+  strokeWeight(20);
+  stroke(0,227,194);
+  ellipse(  random(245,255)  ,250,300,300);
+   strokeWeight(31);
+  stroke(0,209,179);
+    ellipse( 250, random(245,255),275,275);
+  strokeWeight(30);
+  stroke(10,193,167);
+    ellipse( 250, random(245,255),250,250);
+      strokeWeight(29);
+  stroke(2,178,153);
+    ellipse( 250, random(245,255),225,225);
+    strokeWeight(28);
+    stroke(2,162,139);
+      ellipse( 250, random(245,255),200,200);
+       strokeWeight(27);
+      stroke(2,157,135);
+   ellipse(  random(245,255)  ,250,175,175);
+      strokeWeight(26);
+      stroke(1,139,120);
+   ellipse(  random(245,255)  ,250,150,150);
+    strokeWeight(25);
+      stroke(1,126,108);
+   ellipse(  random(245,255)  ,250,125,125);
+   strokeWeight(24);
+   stroke(0,113,97);
+  ellipse(  random(245,255)  ,250,100,100);
+   strokeWeight(23);
+      stroke(1,100,86);
+   ellipse(  random(245,255)  ,250,75,75);
+  strokeWeight(22);
+  stroke(1,80,69);
+       ellipse(  random(245,255)  ,250,50,50);
+        strokeWeight(21);
+      stroke(1,70,66);
+   ellipse(  random(245,255)  ,250,35,35);
+    strokeWeight(20);
+    stroke(1,57,49);
+     ellipse(  random(248,253)  ,250,25,25);
+     strokeWeight(19);
+    stroke(0,39,33);
+     ellipse(  random(249,252)  ,250,10,10);
+   strokeWeight(18);
+    stroke(0,15,13);
+     ellipse(  random(249.5,251.5)  ,250,9,9);
+      fill(0,0,0);
+  ellipse(250,250,10,10);
+ }
+   
